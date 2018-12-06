@@ -29,12 +29,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>com.genequ</groupId>
-			<artifactId>demo-share</artifactId>
-			<version>${demo-share.version}</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -42,8 +36,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
+		<finalName>demo-share-common</finalName>
 	</build>
 
 
